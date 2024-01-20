@@ -11,7 +11,7 @@ public class RacingCar {
 
     public void advance() {
         Integer currDistance = getDistance();
-        setDistance(currDistance++);
+        setDistance(++currDistance);
     }
 
     // getter, setter
