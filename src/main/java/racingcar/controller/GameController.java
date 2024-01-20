@@ -10,15 +10,19 @@ public class GameController {
     }
 
     public void play() {
-        gameService = new GameService(InputController.inputCarName());
-        Integer roundNum = InputController.inputRound();
+        try {
+            gameService = new GameService(InputController.inputCarName());
+            Integer roundNum = InputController.inputRound();
 
-        GameView.printGameResultString();
-        for(int i = 0; i < roundNum; i++) {
-            gameService.playOneRound();
-            GameView.printRacingCarStatus(gameService.getRacingCarList());
+            GameView.printGameResultString();
+            for (int i = 0; i < roundNum; i++) {
+                gameService.playOneRound();
+                GameView.printRacingCarStatus(gameService.getRacingCarList());
+            }
+
+            GameView.printWinner(gameService.determineWinner());
+        } catch (Exception e) {
+            throw new IllegalArgumentException(e);
         }
-
-        GameView.printWinner(gameService.determineWinner());
     }
 }
