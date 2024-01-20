@@ -42,4 +42,8 @@ public class GameService {
 
         return randomNumber >= 4;
     }
+
+    public List<RacingCar> getRacingCarList() {
+        return racingCarList;
+    }
 }
