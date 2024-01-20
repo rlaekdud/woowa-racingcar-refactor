@@ -1,5 +1,6 @@
 package racingcar.utils;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -7,6 +8,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class RandomNumberGeneratorTest {
 
     @Test
+    @DisplayName("RandomNumberGenerator 정상 작동 테스트")
     void generate() {
         // given
 
