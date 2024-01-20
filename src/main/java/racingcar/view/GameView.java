@@ -16,7 +16,7 @@ public class GameView {
     }
 
     public static void printWinner(List<RacingCar> winnerList) {
-        System.out.print("\n최종우승자 : ");
+        System.out.print("\n최종 우승자 : ");
         System.out.print(winnerList.get(0).getName());
         winnerList.remove(0);
 
