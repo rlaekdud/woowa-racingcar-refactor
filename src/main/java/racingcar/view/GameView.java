@@ -13,10 +13,11 @@ public class GameView {
         for(RacingCar racingCar : racingCarList) {
             System.out.println(racingCar.getName() + " : " + getDistanceString(racingCar.getDistance()));
         }
+        System.out.println();
     }
 
     public static void printWinner(List<RacingCar> winnerList) {
-        System.out.print("\n최종 우승자 : ");
+        System.out.print("최종 우승자 : ");
         System.out.print(winnerList.get(0).getName());
         winnerList.remove(0);
 
